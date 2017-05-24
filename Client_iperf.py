@@ -87,6 +87,7 @@ while 1:
 
 
         packet_lost,debit,jitter=collect_info(addr[0])
+        print ('REcupppeeeeeeee')
         s.close()
         '''packet_lost=norm(str(packet_lost)[:6])
         debit=norm(str(debit)[:6])
