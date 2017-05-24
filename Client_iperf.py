@@ -6,7 +6,9 @@ global packet_lost
 packet_lost="old"
 
 def collect_info(Host):
+        print("avant creation client")
         client = iperf3.Client()
+        print("apres creation client")
             
         client.duration=2
         client.server_hostname =Host
@@ -16,6 +18,7 @@ def collect_info(Host):
           
         print('Connecting to {0}:{1}'.format(client.server_hostname, client.port))
         result = client.run()
+        print("avant Runing client")
         
 
         
@@ -81,4 +84,21 @@ while 1:
         print ('Connected with ' + addr[0] + ':' + str(addr[1]))
         conn.send("fdfdgfdsgsdfs".encode('utf-8'))
         s.close()
+'''
+
+        packet_lost,debit,jitter=collect_info(addr[0])
+        packet_lost=norm(str(packet_lost)[:6])
+        debit=norm(str(debit)[:6])
+        jitter=norm(str(jitter)[:6])
+        print(packet_lost)
+        print(debit)
+        print(jitter)
+        
+        print(len("packet_lost : "+packet_lost+"\nDebit : "+str(debit)))
+
+        conn.send(("packet_lost : "+packet_lost+"\nDebit : "+str(debit)).encode('utf-8'))
+       '''
+       
+
+        
 
