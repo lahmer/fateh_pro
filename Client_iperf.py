@@ -80,7 +80,7 @@ while 1:
         conn, addr = s.accept()
         print ('Connected with ' + addr[0] + ':' + str(addr[1]))
 
-
+'''
         packet_lost,debit,jitter=collect_info(addr[0])
         packet_lost=norm(str(packet_lost)[:6])
         debit=norm(str(debit)[:6])
@@ -92,7 +92,8 @@ while 1:
         print(len("packet_lost : "+packet_lost+"\nDebit : "+str(debit)))
 
         conn.send(("packet_lost : "+packet_lost+"\nDebit : "+str(debit)).encode('utf-8'))
-       
+       '''
+        conn.send(("ffffffffffffffffffffffffffffffffffffffffffffffffffffff").encode('utf-8'))
 
         s.close()
 
