@@ -84,10 +84,10 @@ while 1:
         print ('Connected with ' + addr[0] + ':' + str(addr[1]))
         conn.send("fdfdgfdsgsdfs".encode('utf-8'))
         s.close()
-'''
+
 
         packet_lost,debit,jitter=collect_info(addr[0])
-        packet_lost=norm(str(packet_lost)[:6])
+        '''packet_lost=norm(str(packet_lost)[:6])
         debit=norm(str(debit)[:6])
         jitter=norm(str(jitter)[:6])
         print(packet_lost)
