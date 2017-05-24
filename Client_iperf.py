@@ -93,7 +93,7 @@ while 1:
 
         conn.send(("packet_lost : "+packet_lost+"\nDebit : "+str(debit)).encode('utf-8'))
        '''
-        conn.send(("ffffffffffffffffffffffffffffffffffffffffffffffffffffff").encode('utf-8'))
+        conn.send(("ffffffffffffffffffffff").encode('utf-8'))        
 
         s.close()
 
