@@ -56,7 +56,7 @@ import socket
 import sys
  
 HOST = ''   # Symbolic name, meaning all available interfaces
-PORT = 8080# Arbitrary non-privileged port
+PORT = 8081# Arbitrary non-privileged port
 while 1:        
         s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 
