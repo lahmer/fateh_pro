@@ -89,10 +89,11 @@ while 1:
         print(debit)
         print(jitter)
         
-        print(len("packet_lost : "+packet_lost+"\nDebit : "+str(debit)+"\nJitter : "+str(jitter)))
+        print(len("packet_lost : "+packet_lost+"\nDebit : "+str(debit)))
 
-        conn.send(("packet_lost : "+packet_lost+"\nDebit : "+str(debit)+"\nJitter : "+str(jitter)).encode('utf-8'))
+        conn.send(("packet_lost : "+packet_lost+"\nDebit : "+str(debit)).encode('utf-8'))
        
 
         s.close()
+
 
